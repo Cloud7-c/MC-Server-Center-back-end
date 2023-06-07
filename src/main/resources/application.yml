@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: mcsc-back-end
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mcsc
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+server:
+  port: 8080
+
+ssh:
+#  host-os: linux
+  host-os: windows
+  host: 127.0.0.1
+  port: 22
+  user:
+    name: root
+    password: '123456'
+  timeout: 30000
+  server-alive-interval: 20000
+minecraft:
+  path: '/home/mcserver'
+  server: server.jar
+java:
+  path: 'java'
+  arguments: '-Xms2G -Xmx4G'
+allow-register: true
+max-message-list-size: 200
